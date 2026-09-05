@@ -1,0 +1,45 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live anonymous GET of the named /.well-known/ path list against every host this record
+  knows. AaltoSemi registers no API baseURL and publishes no OpenAPI, so the host set is the
+  corporate web host (www.aaltosemi.com) plus the registrable domain apex. Recorded as an
+  absence: every path returned the site's 404 handler, so NO WellKnown or SecurityTxt pointer
+  is wired into apis.yml.
+note: >-
+  Every probe returned HTTP 404 with the vendor CMS error page (text/html, "系统提示"). The apex
+  aaltosemi.com carries MX and SPF records but no A/AAAA record, so it is not reachable over
+  HTTPS at all — recorded as status 0 (DNS resolution failure), not as a 404.
+hosts:
+- host: www.aaltosemi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: aaltosemi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: apex has no A/AAAA record; DNS resolution failed

@@ -1,17 +1,50 @@
 aid: aaltosemi
 name: Aaltosemi
-description: 'Aaltosemi is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'AaltoSemi (Chinese name 芯爱科技（南京）有限公司) is an integrated-circuit
+  packaging substrate manufacturer founded on 8 May 2021 and headquartered in the Pukou
+  Economic Development Zone in Nanjing, Jiangsu, China. The company designs and fabricates
+  the organic substrates that carry the electrical connection between a semiconductor die
+  and the printed circuit board, covering both BT and ABF material systems across Coreless,
+  ETS, FCCSP, FCBGA (BT) and FCBGA (ABF) product families for consumer electronics,
+  high-performance computing, communications, automotive and medical applications, and it
+  offers those as an end-to-end service spanning R&D, design, production and test. Its
+  Nanjing fab is a high-automation plant with a stated annual capacity of roughly 1.45
+  million substrate panels, and the company holds IATF 16949 and VDA 6.3 quality
+  certifications and has filed more than twenty patents since founding. The name is taken
+  from the Finnish designer Alvar Aalto. AaltoSemi is a hardware manufacturer: it sells
+  physical substrates to chip makers and OSATs, and it publishes no public API, developer
+  portal, SDK or machine-readable contract of any kind.'
+image: https://www.aaltosemi.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/aaltosemi/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: no-api-surface
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Semiconductors
+- Semiconductor Packaging
+- IC Substrates
+- Advanced Packaging
+- Electronics Manufacturing
+- Hardware
+- FCBGA
+- Nanjing
+- China
+tags_raw:
+- Company
+- Semiconductors
+- Semiconductor Packaging
+- IC Substrates
+- Advanced Packaging
+- Electronics Manufacturing
+- Hardware
+- FCBGA
+- Nanjing
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +52,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aaltosemi-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aaltosemi
+  url: https://www.aaltosemi.com/en/
+- type: About
+  url: https://www.aaltosemi.com/en/
+- type: Solutions
+  url: https://www.aaltosemi.com/en/h-col-104.html
+- type: Blog
+  url: https://www.aaltosemi.com/en/h-col-106.html
+- type: Careers
+  url: https://www.aaltosemi.com/en/h-col-113.html
+- type: Contact
+  url: https://www.aaltosemi.com/en/h-col-107.html
+- type: Sustainability
+  url: https://www.aaltosemi.com/en/h-col-105.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aaltosemi-inc
+- type: X-SecondaryMarketListing
+  url: https://equityzen.com/company/aaltosemi/
+- type: LLMsTxt
+  url: llms/aaltosemi-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    AaltoSemi is an IC packaging-substrate fab in Nanjing that sells physical BT and ABF
+    substrates to chip makers, not software: www.aaltosemi.com is a six-page corporate CMS
+    site with a Product Center, ESG, News, Careers and Contact section and no developer,
+    API, or download area anywhere in it, and api./developer./developers./docs./portal.
+    aaltosemi.com do not resolve in DNS.
+  evidence:
+  - url: https://www.aaltosemi.com/en/
+    status: 200
+  - url: https://www.aaltosemi.com/openapi.json
+    status: 404
+  - url: https://www.aaltosemi.com/api-docs
+    status: 404
+  - url: https://www.aaltosemi.com/graphql
+    status: 404
+  - url: https://www.aaltosemi.com/llms.txt
+    status: 404
+  - url: https://www.aaltosemi.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.aaltosemi.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.aaltosemi.com/openapi.json
+    status: 0
+  - url: https://github.com/aaltosemi
+    status: 404
+  checked: '2026-09-05'
